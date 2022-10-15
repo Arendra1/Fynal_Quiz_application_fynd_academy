@@ -435,6 +435,7 @@
 <script>
 import Vue from 'vue';
 import axios from 'axios';
+import Config from '../config.js';
 import VueToast from 'vue-toast-notification';
 Vue.use(VueToast);
 import 'vue-toast-notification/dist/theme-sugar.css';
@@ -468,7 +469,7 @@ export default {
     async profile() {
 
       try {
-        const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
+        const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
         this.name = userInfo.data.user.name;
         this.email = userInfo.data.user.email;
         this.displayName = userInfo.data.user.displayName;
@@ -496,12 +497,12 @@ export default {
 
       try {
 
-        const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
+        const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
         this.tutorName = userInfo.data.user.name;
         this.tutorName = this.camelize(this.tutorName);
         const tutorDomain = userInfo.data.user.domain;
 
-        const result = await axios.get('http://localhost:8000/api/quiz/quizzes');
+        const result = await axios.get(`${Config.base_url}/quiz/quizzes`);
         const quizzes = result.data.quizzes;
         quizzes.sort((a, b) => b.quizId - a.quizId);
         console.log('Quizzes result is', quizzes);
@@ -536,7 +537,7 @@ export default {
     // UPDATE PROFILE Function
     async updateProfile() {
 
-      const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
+      const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
       console.log(userInfo);
       const id = userInfo.data.user._id;
       const displayName = this.displayName;
@@ -552,7 +553,7 @@ export default {
         bio
       }
 
-      const response = await axios.post('http://localhost:8000/api/user/updateProfile', doc);
+      const response = await axios.post(`${Config.base_url}/user/updateProfile`, doc);
       Vue.$toast.open(response.data.message);
 
     },
@@ -565,7 +566,7 @@ export default {
       console.log("updateQuiz Function has called");
       console.log("**** Quiz ID in teacher home page ***", quizId);
       let doc = { quizId };
-      const response = await axios.post('http://localhost:8000/api/quiz/updateQuiz', doc);
+      const response = await axios.post(`${Config.base_url}/quiz/updateQuiz`, doc);
 
       if (response) {
         localStorage.setItem('quizId', quizId);

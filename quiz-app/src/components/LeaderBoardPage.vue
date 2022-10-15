@@ -1,17 +1,13 @@
 <template>
   <div class="outermost h-screen bg-[#131417]">
     <h1 class="font-sans text-2xl text-green-500 font-bold flex justify-center pt-2  -mb-10">Welcome to    <span class="text-yellow-500 ml-2"> LeadBoard</span></h1>
-    <!-- <p class="text-white"> This is score {{score}}</p> -->
     <div class="btn  text-[#131417]  mt-4">
       {{ getData()  }}
-      <!-- <button class="
-            btn bg-purple-800 w-24 h-8 text-white font-bold text-sm rounded-md hover:bg-purple-900" @click="getData()">Get Data {{ getData() }}
-      </button> -->
+
     </div>
 
-    <!-- Tabke data Starts -->
 
-
+    <!-- Table Section Starts -->
     <div class="table h-screen  w-full bg-[#131417] p-16">
       <div class="heading text-white flex justify-center items-center font-bold text-2xl my-4 font-mono -mt-10 px-40">
 
@@ -43,7 +39,7 @@
     </div>
 
 
-    <!-- Tabke data End -->
+    <!-- Table section End -->
 
 
   </div>
@@ -51,6 +47,8 @@
 
 <script>
 import axios from 'axios';
+import Config from '../config.js';
+
 export default {
   name: 'LeaderBoardPage',
   data() {
@@ -63,31 +61,19 @@ export default {
   methods: {
     async getData() {
       try {
-        const result = await axios.get('http://localhost:8000/api/user/all-users');
-        // console.log(result.data.users);
-        // console.log(result.data.message);
+        const result = await axios.get(`${Config.base_url}/user/all-users`);
         const Users = await result.data.users;
-
-        // let username = document.getElementById('username');
-        // let useremail = document.getElementById('useremail');
 
         let UsersInfo = document.getElementById('UsersInfo');
 
 
-
-        // let htmlusername = `<h1 class="font-sans w-[20vw] text-2xl text-white font-bold ">Student Name</h1>`;
-        // let htmluseremail = `<h1 class="font-sans w-[20vw] text-2xl text-white font-bold ">Email Id</h1>`;
         let htmlUserInfo = ``;
 
         console.log(Users);
         Users.sort((a, b) => b.score - a.score);
         let rank = 0;
-        // let length = Users.length ;
 
-
-        // let flagApi = 'https://countryflagsapi.com/png/br';
         Users.forEach(async (user,index) => { 
-          // console.log("index is : ", index);
           if(index > 0 && Users[index-1].score === Users[index].score )
           {
             rank;
@@ -95,12 +81,6 @@ export default {
           else{
             rank++;
           }
-
-          // for flag of countries
-          // let countryName = user.country;
-          // const  country =  countryName.toLowerCase();
-          // const countryFlag = await axios.get(`https://countryflagsapi.com/png/${country}`);
-          // console.log("countryFlag : ", countryFlag);
 
           htmlUserInfo += `<tr class="bg-[#131417] border-b   dark:border-gray-700">
               <td class="py-4 px-6">
@@ -118,15 +98,11 @@ export default {
             </tr>`
 
 
-          // htmlusername += `<p class="mt-4 ">${user.name}</p>`;
-          // htmluseremail += `<p class="mt-4">${user.email}</p>`;
         });
 
         UsersInfo.innerHTML = htmlUserInfo;
 
 
-        // username.innerHTML = htmlusername;
-        // useremail.innerHTML = htmluseremail;
 
 
       } catch (error) {
@@ -138,9 +114,6 @@ export default {
 
 }
 
-// this.getData();
-// let score = 0;
-// console.log(score);
 </script>
 
 <style>

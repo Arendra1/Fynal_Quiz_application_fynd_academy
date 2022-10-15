@@ -1,7 +1,7 @@
 
 
 const Config = {
-    base_url : "http://localhost:8000/api"
+    base_url : "http://mevn-quiz-application-fynd.herokuapp.com/api"
 }
 
 export default Config;

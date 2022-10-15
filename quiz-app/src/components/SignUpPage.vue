@@ -88,7 +88,6 @@ export default {
 
         async register() {
             this.checkInput();
-            // Toast for required details to be filled by the user
             if (this.name && this.email && this.domain && this.accessLevel && this.password && this.password_confirmation) {
                 if (this.password === this.password_confirmation) {
                     if (this.password.length >= 6 && this.password.length <= 15) {
@@ -120,7 +119,6 @@ export default {
             }
             console.log(newUser);
 
-            // const response = await axios.post('http://localhost:8000/api/user/register', newUser).then((result) => {
             const response = await axios.post(`${Config.base_url}/user/register`, newUser).then((result) => {
                 return result.data;
             }).catch((error) => {

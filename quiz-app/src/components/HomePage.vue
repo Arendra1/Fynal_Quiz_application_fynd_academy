@@ -428,7 +428,6 @@
 
           <div class="heading text-green-500 flex justify-center items-center font-bold text-2xl my-4 font-mono ">
             <h1 class="">TRENDING <span class="text-yellow-500"> QUIZZES </span></h1>
-            <!-- <p class="text-sm text-[#131417]">{{trendingQuizzes()}}</p> -->
           </div>
           <div class="overflow-x-auto relative shadow-md sm:rounded-lg border-2 border-white">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -504,7 +503,6 @@
 
           <div class="heading text-green-500 flex justify-center items-center font-bold text-2xl my-4 font-mono">
             <h1 class="">RECOMMENDED <span class="text-yellow-500"> QUIZZES </span> </h1>
-            <!-- <p class="text-sm text-[#131417]">{{recommmendedQuizzes()}}</p> -->
           </div>
           <div class="overflow-x-auto relative shadow-md sm:rounded-lg border-2 border-white">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -592,7 +590,7 @@
 <script>
 import Vue from 'vue';
 import axios from 'axios';
-
+import Config from '../config.js';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
 import setAuthHeader from '@/utils/setAuthHeader';
@@ -637,7 +635,7 @@ export default {
     async profile() {
 
       try {
-        const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
+        const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
         console.log(userInfo);
         this.name = userInfo.data.user.name;
         this.email = userInfo.data.user.email;
@@ -663,7 +661,7 @@ export default {
     // UPDATE PROFILE Function
     async updateProfile() {
 
-      const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
+      const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
       console.log(userInfo);
       const id = userInfo.data.user._id;
       const displayName = this.displayName;
@@ -682,7 +680,7 @@ export default {
       console.log('THis is recieved in Body :');
       console.log(doc);
 
-      const response = await axios.post('http://localhost:8000/api/user/updateProfile', doc);
+      const response = await axios.post(`${Config.base_url}/user/updateProfile`, doc);
       console.log("response.message : ",response.message);
       console.log("response : ",response);
       Vue.$toast.open(response.data.message);
@@ -698,7 +696,7 @@ export default {
       this.success = false;
 
       try {
-        const result = await axios.get('http://localhost:8000/api/quiz/quizzes');
+        const result = await axios.get(`${Config.base_url}/quiz/quizzes`);
         const quizzes = result.data.quizzes;
 
         // For Recently Added Quizzes
@@ -720,7 +718,7 @@ export default {
         // For Recommended  Quizzes
 
 
-        const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
+        const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
         const user = userInfo.data.user;
 
         // Sorting  alphabetically
@@ -761,7 +759,7 @@ export default {
       console.log("**** Quiz ID in home ***", quizId);
       // console.log("****",quizId);
       let doc = { quizId };
-      const response = await axios.post('http://localhost:8000/api/quiz/getQuiz', doc);
+      const response = await axios.post(`${Config.base_url}/quiz/getQuiz`, doc);
       // console.log(" **** Quiz ID in home *** : ", quizId);
       console.log("**** Current Quiz ID in home *** ", response.data.quiz);
 

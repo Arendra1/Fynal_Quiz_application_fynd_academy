@@ -27,6 +27,7 @@
 
 <script>
 import Vue from 'vue';
+import Config from '../config.js';
 import axios from 'axios';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
@@ -87,7 +88,7 @@ export default {
 
 
       // Fetching data from the backend using axios
-      const response = await axios.post('http://localhost:8000/api/user/login', newUser).then((result)=>{
+      const response = await axios.post(`${Config.base_url}/user/login`, newUser).then((result)=>{
         // console.log(result);
         return result.data;
       }).then((data)=>{
