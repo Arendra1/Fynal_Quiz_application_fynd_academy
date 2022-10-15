@@ -51,6 +51,7 @@
   
 <script>
 import Vue from 'vue';
+import Config from '../config.js';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
 import axios from 'axios';
@@ -119,7 +120,8 @@ export default {
             }
             console.log(newUser);
 
-            const response = await axios.post('http://localhost:8000/api/user/register', newUser).then((result) => {
+            // const response = await axios.post('http://localhost:8000/api/user/register', newUser).then((result) => {
+            const response = await axios.post(`${Config.base_url}/user/register`, newUser).then((result) => {
                 return result.data;
             }).catch((error) => {
                 console.log(error);
