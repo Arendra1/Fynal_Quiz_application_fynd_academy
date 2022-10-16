@@ -116,29 +116,67 @@ class quizController {
 
 
 
-  // ADD Question
-  static addQuestion = async (req , res) =>{
+  // // OLD  ADD Question
+  // static addQuestion = async (req , res) =>{
 
-    try{
-    const { _id , question} = req.body;
+  //   try{
+  //   const { _id , question} = req.body;
 
-    console.log(_id);
-    console.log(question);
+  //   console.log(_id);
+  //   console.log(question);
 
-    const response = await quizModel.findByIdAndUpdate(_id, {$set:{questions : {"1" : question }}});
+  //   const response = await quizModel.findByIdAndUpdate(_id, {$set:{questions : {"1" : question }}});
 
-    console.log(response);
+  //   console.log(response);
 
-    res.send({status:"success" , message:"Quiz updated successfully"});
+  //   res.send({status:"success" , message:"Quiz updated successfully"});
 
-    res.send
-    }catch(err)
-    {
-      console.log(err);
-      res.send({status:"Failed" , message:"Quiz not updated"});
+  //   res.send
+  //   }catch(err)
+  //   {
+  //     console.log(err);
+  //     res.send({status:"Failed" , message:"Quiz not updated"});
+  //   }
+
+  // }
+
+
+    // NEW ADD QUESTION
+    static addQuestion = async (req , res) =>{
+      console.log("Add function called");
+      try{
+      const { _id , questions} = req.body;
+  
+      console.log(_id);
+      console.log(questions);
+  
+      const result = await quizModel.findByIdAndUpdate(_id, {questions : questions} , (err , docs)=>{
+        if(err)
+        {
+          console.log(err);
+          res.send({
+            status: "failed",
+            message: "Question not added"
+          });
+        }
+        else{
+          console.log(docs);
+          res.send({
+            status: "success",
+            message: "Question added successfully"
+          });
+        }
+      })
+  
+      }catch(err)
+      {
+        console.log(err);
+        res.send({status:"Failed" , message:"Quiz not updated" , error : err.name , mess: err.message});
+      }
+  
     }
 
-  }
+
 
 
 
