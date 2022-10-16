@@ -1,7 +1,6 @@
 import idModel from "../models/incremnet.js";
 import quizModel from "../models/quiz.js";
 import axios from 'axios';
-// import Config from '../quiz-app/src/config.js';
 
 class idController {
   static addId = async (req, res) => {
@@ -16,8 +15,16 @@ class idController {
             const newVal = new idModel({ id: "autoval", count: 1 });
             newVal.save();
             seqId = 1;
+            // res.send({
+            //   status: "succes",
+            //   message: "Added first Id successfully",
+            // });
           } else {
             seqId = cd.count;
+            // res.send({
+            //   status: "succes",
+            //   message: "Added second Id successfully",
+            // });
           }
 
           let quizId = seqId;
@@ -33,11 +40,10 @@ class idController {
 
 
           try{
-            // const response = await axios.post(`http://localhost:8000/api/quiz/addQuiz`, doc);  //--> old line
-            const response = await axios.post(`https://mevn-quiz-application-fynd.herokuapp.com/api/quiz/addQuiz`, doc); //-> new line
+            const response = await axios.post('http://localhost:8000/api/quiz/addQuiz', doc);
             console.log("Below Data Is from counter Table");
             console.log(response.data);
-            if(response.data.status == "success")
+            if(response.message == "successfully Added Quiz")
             {
               res.status(201).send({
                 status: "success",

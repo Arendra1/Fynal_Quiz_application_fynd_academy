@@ -21,7 +21,7 @@ class UserController {
     console.log("email : ", email);
     console.log("accessLevel : ", accessLevel);
     console.log("password : ", password);
-    // console.log("password_confirmation : ", password_confirmation);
+    console.log("password_confirmation : ", password_confirmation);
 
     const user = await UserModel.findOne({ email: email });
     if (user) {

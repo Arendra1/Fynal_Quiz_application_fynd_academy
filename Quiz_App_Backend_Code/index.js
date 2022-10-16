@@ -9,7 +9,7 @@ import idRoutes from './routes/incemenet.js'
 
 
 const app = express()
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8080
 const DATABASE_URL = process.env.DATABASE_URL
 
 // CORS Policy
@@ -29,17 +29,6 @@ app.use('/api/quiz', quizRoutes)
 app.use('/api/id', idRoutes)
 
 
-//  3 : step Heroku
-
-if(process.env.NODE_ENV == "production")
-{
-    app.use(express.static("quiz-app/dist"));
-}
-
-
-
 app.listen(port , () =>{
     console.log(`Server Listening at http://localhost:${port}`)
 })
-
-

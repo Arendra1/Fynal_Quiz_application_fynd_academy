@@ -51,7 +51,6 @@
   
 <script>
 import Vue from 'vue';
-import Config from '../config.js';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
 import axios from 'axios';
@@ -88,6 +87,7 @@ export default {
 
         async register() {
             this.checkInput();
+            // Toast for required details to be filled by the user
             if (this.name && this.email && this.domain && this.accessLevel && this.password && this.password_confirmation) {
                 if (this.password === this.password_confirmation) {
                     if (this.password.length >= 6 && this.password.length <= 15) {
@@ -119,7 +119,7 @@ export default {
             }
             console.log(newUser);
 
-            const response = await axios.post(`${Config.base_url}/user/register`, newUser).then((result) => {
+            const response = await axios.post('http://localhost:8000/api/user/register', newUser).then((result) => {
                 return result.data;
             }).catch((error) => {
                 console.log(error);
@@ -129,6 +129,10 @@ export default {
             if (response.message == "Registration Successfull") {
                 console.log("Registration Successfull");
                 this.$router.push({ path: '/login', replace: true })
+            }
+            else {
+
+                // this.$router.push({path:'/' , replace:true})
             }
 
 

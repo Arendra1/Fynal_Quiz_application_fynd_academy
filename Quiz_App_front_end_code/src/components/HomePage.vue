@@ -344,6 +344,71 @@
       </div>
     </div>
 
+    <!-- Quiz part middle start -->
+    <!-- <div class="middle  bg-[#131417] flex flex-col  justify-center items-center ">
+      <div
+        class="recentQuiz h-fit w-[80%] flex flex-col justify-center border-2 border-green-400 items-center px-12 mt-10 text-white">
+        <div class="heading  font-bold text-2xl mt-8 mb-4 font-mono">
+          <h1>Recently Added Quizzes</h1>
+        </div>
+        <div
+          class="topics border-2 border-white hover:border-green-500 w-[50%] p-10  text-green-700 font-sans font-bold">
+          <h2 class="hover:text-white hover:underline cursor-pointer">Array and Array Operations</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Stack Operations – 1</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Stack Operations – 2</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Singly Linked Lists Operations</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Doubly Linked List</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Circular Linked Lists</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Queue using Linked List</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Double Ended Queue (Dequeue)</h2>
+        </div>
+        <div
+          class="btn h-10 mb-10 w-52 mt-6 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+          <router-link to="/quiz" exact>Attempt Quiz Now</router-link>
+        </div>
+      </div>
+      <div
+        class="trendingQuiz h-fit w-[80%] flex flex-col justify-center border-2 border-green-400 items-center px-12 mt-10 text-white">
+        <div class="heading font-bold text-2xl my-4 font-mono">
+          <h1>Trending Quizzes</h1>
+        </div>
+        <div
+          class="topics border-2 border-white hover:border-green-500 w-[50%] p-10  text-green-700 font-sans font-bold">
+          <h2 class="hover:text-white hover:underline cursor-pointer">C Programming Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">C++ Programming Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Java Programming Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Python Programming Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Data Structures Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Algorithms Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Algorithms Mock Tests</h2>
+        </div>
+        <div
+          class="btn h-10 mb-10 w-52 mt-6 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+          <router-link to="/quiz" exact>Attempt Quiz Now</router-link>
+        </div>
+      </div>
+      <div
+        class="recommendedQuiz h-fit w-[80%] flex flex-col justify-center border-2 border-green-400 items-center px-12 mt-10 text-white">
+        <div class="heading font-bold text-2xl my-4 font-mono">
+          <h1>Recommended Quizzes For You</h1>
+        </div>
+        <div
+          class="topics border-2 border-white hover:border-green-500 w-[50%] p-10  text-green-700 font-sans font-bold">
+          <h2 class="hover:text-white hover:underline cursor-pointer">C Programming Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">C++ Programming Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Java Programming Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Python Programming Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Data Structures Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Algorithms Mock Tests</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Algorithms Mock Tests</h2>
+        </div>
+        <div
+          class="btn h-10 mb-10 w-52 mt-6 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+          <router-link to="/quiz" exact>Attempt Quiz Now</router-link>
+        </div>
+      </div>
+    </div> -->
+    <!-- Quiz part middle end -->
 
     <!-- Table Part Started  -->
 
@@ -414,11 +479,174 @@
                   </td>
                 </tr>
 
+                <!-- <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    03
+                  </td>
+                  <td class="py-4 px-6">
+                    Stack Operations – 2
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <router-link to="/quiz">
+                      <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                    </router-link>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b  dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    04
+                  </td>
+                  <td class="py-4 px-6">
+                    Singly Linked Lists Operations
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <router-link to="/quiz">
+                      <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                    </router-link>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b  dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    05
+                  </td>
+                  <td class="py-4 px-6">
+                    Doubly Linked List
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Easy
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    <router-link to="/quiz">
+                      <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                    </router-link>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    06
+                  </td>
+                  <td class="py-4 px-6">
+                    Circular Linked List
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <router-link to="/quiz">
+                      <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                    </router-link>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    07
+                  </td>
+                  <td class="py-4 px-6">
+                    Queue using Linked List
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <router-link to="/quiz">
+                      <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                    </router-link>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    08
+                  </td>
+                  <td class="py-4 px-6">
+                    Double Ended Queue (Dequeue)
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <router-link to="/quiz">
+                      <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                    </router-link>
+                  </td>
+                </tr> -->
               </tbody>
             </table>
 
 
           </div>
+
+          <!-- <div class="button flex justify-center space-x-8">
+            <div
+              class="btn h-10 w-40 mt-4 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+              <router-link to="/addQuiz" exact>Add a new Quiz</router-link>
+            </div>
+            <div
+              class="btn h-10 w-40 mt-4 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+              <router-link to="/addQuiz" exact>Update Quiz</router-link>
+            </div>
+
+          </div> -->
+
 
 
         </div>
@@ -428,6 +656,7 @@
 
           <div class="heading text-green-500 flex justify-center items-center font-bold text-2xl my-4 font-mono ">
             <h1 class="">TRENDING <span class="text-yellow-500"> QUIZZES </span></h1>
+            <!-- <p class="text-sm text-[#131417]">{{trendingQuizzes()}}</p> -->
           </div>
           <div class="overflow-x-auto relative shadow-md sm:rounded-lg border-2 border-white">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -487,12 +716,207 @@
                   </td>
                 </tr>
 
+                <!-- <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    01
+                  </td>
+                  <td class="py-4 px-6">
+                    Array and Array Operations
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] first-line: border-b  dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    02
+                  </td>
+                  <td class="py-4 px-6">
+                    Stack Operations – 1
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Easy
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    03
+                  </td>
+                  <td class="py-4 px-6">
+                    Stack Operations – 2
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b  dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    04
+                  </td>
+                  <td class="py-4 px-6">
+                    Singly Linked Lists Operations
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b  dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    05
+                  </td>
+                  <td class="py-4 px-6">
+                    Doubly Linked List
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Easy
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    06
+                  </td>
+                  <td class="py-4 px-6">
+                    Circular Linked List
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    07
+                  </td>
+                  <td class="py-4 px-6">
+                    Queue using Linked List
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    08
+                  </td>
+                  <td class="py-4 px-6">
+                    Double Ended Queue (Dequeue)
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr> -->
               </tbody>
             </table>
 
 
           </div>
 
+          <!-- <div class="button flex justify-center space-x-8">
+            <div
+              class="btn h-10 w-40 mt-4 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+              <router-link to="/addQuiz" exact>Add a new Quiz</router-link>
+            </div>
+            <div
+              class="btn h-10 w-40 mt-4 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+              <router-link to="/addQuiz" exact>Update Quiz</router-link>
+            </div>
+
+          </div> -->
 
 
 
@@ -503,6 +927,7 @@
 
           <div class="heading text-green-500 flex justify-center items-center font-bold text-2xl my-4 font-mono">
             <h1 class="">RECOMMENDED <span class="text-yellow-500"> QUIZZES </span> </h1>
+            <!-- <p class="text-sm text-[#131417]">{{recommmendedQuizzes()}}</p> -->
           </div>
           <div class="overflow-x-auto relative shadow-md sm:rounded-lg border-2 border-white">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -563,11 +988,208 @@
                   </td>
                 </tr>
 
+
+                <!-- <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    01
+                  </td>
+                  <td class="py-4 px-6">
+                    Array and Array Operations
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] first-line: border-b  dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    02
+                  </td>
+                  <td class="py-4 px-6">
+                    Stack Operations – 1
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Easy
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    03
+                  </td>
+                  <td class="py-4 px-6">
+                    Stack Operations – 2
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b  dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    04
+                  </td>
+                  <td class="py-4 px-6">
+                    Singly Linked Lists Operations
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b  dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    05
+                  </td>
+                  <td class="py-4 px-6">
+                    Doubly Linked List
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    Easy
+                  </td>
+                  <td class="py-4 px-6">
+                    10
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    06
+                  </td>
+                  <td class="py-4 px-6">
+                    Circular Linked List
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    07
+                  </td>
+                  <td class="py-4 px-6">
+                    Queue using Linked List
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr>
+                <tr class="bg-[#131417] border-b   dark:border-gray-700">
+                  <td class="py-4 px-6">
+                    08
+                  </td>
+                  <td class="py-4 px-6">
+                    Double Ended Queue (Dequeue)
+                  </td>
+                  <td class="py-4 px-6">
+                    DSA
+                  </td>
+                  <td class="py-4 px-6">
+                    100
+                  </td>
+                  <td class="py-4 px-6">
+                    Medium
+                  </td>
+                  <td class="py-4 px-6">
+                    20
+                  </td>
+                  <td class="py-4 px-6">
+                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attemp Now</a>
+                  </td>
+                </tr> -->
               </tbody>
             </table>
 
 
           </div>
+
+          <!-- <div class="button flex justify-center space-x-8">
+            <div
+              class="btn h-10 w-40 mt-4 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+              <router-link to="/addQuiz" exact>Add a new Quiz</router-link>
+            </div>
+            <div
+              class="btn h-10 w-40 mt-4 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+              <router-link to="/addQuiz" exact>Update Quiz</router-link>
+            </div>
+
+          </div> -->
 
 
 
@@ -590,11 +1212,15 @@
 <script>
 import Vue from 'vue';
 import axios from 'axios';
-import Config from '../config.js';
+
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
 import setAuthHeader from '@/utils/setAuthHeader';
 Vue.use(VueToast);
+// import { RouterLink } from 'vue-router';
+
+// import setAuthHeader from '../utils/setAuthHeader.js';
+// import loginPage from './LogInPage.vue';
 
 Vue.use(VueToast);
 export default {
@@ -635,8 +1261,11 @@ export default {
     async profile() {
 
       try {
-        const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
+        const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
         console.log(userInfo);
+        // console.log(userInfo.data);
+        // console.log(userInfo.data.name);
+        // console.log(userInfo.data.email);
         this.name = userInfo.data.user.name;
         this.email = userInfo.data.user.email;
         this.displayName = userInfo.data.user.displayName;
@@ -661,7 +1290,7 @@ export default {
     // UPDATE PROFILE Function
     async updateProfile() {
 
-      const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
+      const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
       console.log(userInfo);
       const id = userInfo.data.user._id;
       const displayName = this.displayName;
@@ -680,7 +1309,7 @@ export default {
       console.log('THis is recieved in Body :');
       console.log(doc);
 
-      const response = await axios.post(`${Config.base_url}/user/updateProfile`, doc);
+      const response = await axios.post('http://localhost:8000/api/user/updateProfile', doc);
       console.log("response.message : ",response.message);
       console.log("response : ",response);
       Vue.$toast.open(response.data.message);
@@ -696,7 +1325,7 @@ export default {
       this.success = false;
 
       try {
-        const result = await axios.get(`${Config.base_url}/quiz/quizzes`);
+        const result = await axios.get('http://localhost:8000/api/quiz/quizzes');
         const quizzes = result.data.quizzes;
 
         // For Recently Added Quizzes
@@ -718,7 +1347,7 @@ export default {
         // For Recommended  Quizzes
 
 
-        const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
+        const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
         const user = userInfo.data.user;
 
         // Sorting  alphabetically
@@ -751,6 +1380,153 @@ export default {
     },
 
 
+    //     async trendingQuizzes() {
+
+    //       try {
+    //         const result = await axios.get('http://localhost:8000/api/quiz/quizzes');
+    //         const quizzes = result.data.quizzes;
+    //         // console.log('Quizzes result is', quizzes);
+
+    //         // let recentlyAddedQuizzes = document.getElementById('recentlyAddedQuizzes');
+    //         let trendingQuizzes = document.getElementById('trendingQuizzes');
+    //         // let recommmendedQuizzes = document.getElementById('recommmendedQuizzes');
+    //         let count = 0;
+
+    //         let htmlQuizzesInfo = ``;
+    //         // let rank = 0;
+
+    //         quizzes.sort((a, b) => b.attemptedBy - a.attemptedBy);
+    //         quizzes.forEach((quiz) => {
+    //           // rank++;
+
+    //           count++;
+
+    //           if (count < 9) {
+
+    //             htmlQuizzesInfo += `<tr class="bg-[#131417] border-b   dark:border-gray-700">
+    //   <td class="py-4 px-6">
+    //     ${quiz.quizId}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.quizName}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.category}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.totalQuestions}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.difficultyLevel}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.attemptedBy}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     <a href="#" v-if="currentQuiz(${quiz.quizId})"  @click="currentQuiz(${quiz.quizId})" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attempt Now</a>
+    //   </td>
+    // </tr>`
+    //           }
+
+    //         });
+
+    //         // recentlyAddedQuizzes.innerHTML = htmlQuizzesInfo;
+    //         trendingQuizzes.innerHTML = htmlQuizzesInfo;
+    //         // recommmendedQuizzes.innerHTML = htmlQuizzesInfo;
+
+
+
+
+    //       }
+    //       catch (error) {
+    //         console.log(error.name);
+    //         console.log(error.message);
+    //       }
+
+    //     },
+
+
+    //     async recommmendedQuizzes() {
+
+    //       try {
+    //         const result = await axios.get('http://localhost:8000/api/quiz/quizzes');
+    //         const quizzes = result.data.quizzes;
+    //         // console.log('Quizzes result is', quizzes);
+
+    //         // let recentlyAddedQuizzes = document.getElementById('recentlyAddedQuizzes');
+    //         // let trendingQuizzes = document.getElementById('trendingQuizzes');
+    //         let recommmendedQuizzes = document.getElementById('recommmendedQuizzes');
+    //         let count = 0;
+
+    //         let htmlQuizzesInfo = ``;
+    //         // let rank = 0;
+
+    //         // Sorting  alphabetically
+    //         quizzes.sort((a, b) => {
+    //           if (a.quizName > b.quizName) {
+    //             return 1;
+    //           } else {
+    //             return -1;
+    //           }
+    //         });
+
+    //         // Sorting based on attemptedBy
+    //         quizzes.sort((a, b) => {
+    //           if (a.attemptedBy < b.attemptedBy) {
+    //             return 1;
+    //           } else {
+    //             return -1;
+    //           }
+    //         });
+
+    //         quizzes.forEach((quiz) => {
+    //           // rank++;
+
+    //           count++;
+
+    //           if ((count < 6) && (quiz.difficultyLevel != "Hard")) {
+
+    //             htmlQuizzesInfo += `<tr class="bg-[#131417] border-b   dark:border-gray-700">
+    //   <td class="py-4 px-6">
+    //     ${quiz.quizId}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.quizName}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.category}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.totalQuestions}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.difficultyLevel}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     ${quiz.attemptedBy}
+    //   </td>
+    //   <td class="py-4 px-6">
+    //     <a href="#" @click="currentQuiz(${quiz.quizId})" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Attempt Now</a>
+    //   </td>
+    // </tr>`
+    //           }
+
+    //         });
+
+    //         // recentlyAddedQuizzes.innerHTML = htmlQuizzesInfo;
+    //         // trendingQuizzes.innerHTML = htmlQuizzesInfo;
+    //         recommmendedQuizzes.innerHTML = htmlQuizzesInfo;
+
+
+
+
+    //       }
+    //       catch (error) {
+    //         console.log(error.name);
+    //         console.log(error.message);
+    //       }
+
+    //     },
 
 
     async currentQuiz(quizId) {
@@ -759,7 +1535,7 @@ export default {
       console.log("**** Quiz ID in home ***", quizId);
       // console.log("****",quizId);
       let doc = { quizId };
-      const response = await axios.post(`${Config.base_url}/quiz/getQuiz`, doc);
+      const response = await axios.post('http://localhost:8000/api/quiz/getQuiz', doc);
       // console.log(" **** Quiz ID in home *** : ", quizId);
       console.log("**** Current Quiz ID in home *** ", response.data.quiz);
 

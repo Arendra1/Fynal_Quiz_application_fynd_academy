@@ -15,6 +15,9 @@
           <button  @click="logInCheck()"  class="btn  bg-[#1ba94c] text-white font-bold w-20 h-10 rounded-sm hover:bg-green-700">
             Log In
           </button>
+          <!-- <button  v-else @click="login()" class="btn  bg-[#1ba94c] text-white font-bold w-20 h-10 rounded-sm hover:bg-green-700">
+            <router-link to="/" exact>Log In</router-link>
+          </button> -->
         </div>
         <div class="register flex ">
           <p class="font-semibold  text-black mr-2">Not have an account ?</p>
@@ -27,7 +30,6 @@
 
 <script>
 import Vue from 'vue';
-import Config from '../config.js';
 import axios from 'axios';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
@@ -72,6 +74,13 @@ export default {
           // console.log(this.success);
           Vue.$toast.open('Enter valid Email or Password');
         }
+        else{
+          //  console.log(this.success);
+        }
+      }
+      else {
+        // console.log(this.success);
+        // Vue.$toast.open('All Fields are required');
       }
 
     },
@@ -88,7 +97,7 @@ export default {
 
 
       // Fetching data from the backend using axios
-      const response = await axios.post(`${Config.base_url}/user/login`, newUser).then((result)=>{
+      const response = await axios.post('http://localhost:8000/api/user/login', newUser).then((result)=>{
         // console.log(result);
         return result.data;
       }).then((data)=>{
@@ -103,15 +112,24 @@ export default {
 
       console.log(response.user);
       console.log(response.token);
+      // console.log(response.name);
+      // console.log(response.email);
+      // console.log(response.accessLevel);
+      // console.log(response.score);
 
       if(response.user){
           console.log(response.user.accessLevel);
           if(response.user.accessLevel == "Student"){
               this.$router.push({path:'/home'  , replace:true})
-
+              // Vue.$toast.open('Login Successfull');
+              // localStorage.setItem("jwToken" , response.token);
+              // setAuthHeader(response.token);
+            //  sending all deatils as params
+            // `/home/${response.name}/${response.email}/${response.accessLevel}/${response.score}`
           }
           else{
             this.$router.push({path: '/teacherHome' , replace:true})
+            // Vue.$toast.open('Login Successfull');
             
           }
           localStorage.setItem("jwtToken" , response.token);
@@ -119,6 +137,7 @@ export default {
           return true;
       }
       else{
+        // Vue.$toast.open('Email or Password is Invalid');
         return false;
       }
       

@@ -1,5 +1,6 @@
 <template>
     <div class="outermost h-screen bg-black">
+        <!-- <h1 class="font-sans text-2xl text-white font-bold flex justify-center pt-2">Add a new Quiz</h1> -->
 
         <div class="z-10 h-76 w-full p-10 border-2 flex border-[#f3f7f7] top-4 text-white  bg-[#131417]" id="profile">
             <div
@@ -68,7 +69,6 @@
 <script>
 import Vue from 'vue';
 import axios from 'axios';
-import Config from '../config.js';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
 Vue.use(VueToast);
@@ -124,8 +124,20 @@ export default {
                 const quizName = localStorage.getItem('quizName');
                 let bodyObj = { quizName };
 
-                const result = await axios.post(`${Config.base_url}/quiz/getQuizByName`, bodyObj);
+                const result = await axios.post('http://localhost:8000/api/quiz/getQuizByName', bodyObj);
                 console.log(result);
+
+                        //   const response = await axios.post('http://localhost:8000/api/id/addId',doc);
+                        //   console.log( "Response from AddId ",response);
+                        //   if(response.message == "Quiz Added Successfully")
+                        //   {
+                        //     Vue.$toast.open('Question Added Successfully');
+
+                        //   }
+                        //   else{
+
+                        //     Vue.$toast.open('Quiz already Exists');
+                        //   }
 
                     }
                     else {

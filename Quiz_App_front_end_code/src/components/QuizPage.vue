@@ -1,5 +1,6 @@
 <template>
   <div class="outermost h-screen bg-[#131417] -mt-16">
+    <!-- <h1 class="font-sans text-2xl text-white font-bold flex justify-center pt-2">Welcome to the Quiz Page</h1> -->
 
     <!-- sample quiz start -->
 
@@ -13,6 +14,14 @@
                     <p class="text-2xl font-bold">
                         {{questions[index]['question']}}
                     </p>
+                    <!-- <label :for="key" class="block mt-4 border border-gray-300 rounded-lg py-2 px-6 text-lg"
+                        v-for="(answer , key) in questions[index]['answers']" :key="key" >
+                        <input type="radio" :id="key" class="hidden" :value="key" @change="answered($event)"
+                            :disabled=" selectedAnswer != '' ">
+                        {{answer}}
+                    </label> -->
+                    <!-- <label for="key" class="block mt-4 border border-gray-300 rounded-lg py-2 px-6 text-lg"
+                     v-for="(answer, key) in questions[index]['answers']" :key="key" ></label> -->
 
                      <label :for="key" class="block mt-4 border border-gray-300 rounded-lg py-2 px-6 text-lg"
                         v-for="answer , key in questions[index]['answers']" :key="key" :class="{'hover:bg-gray-100 cursor-pointer' :  selectedAnswer == ''  } &&
@@ -65,8 +74,6 @@
 <script>
 
 import axios from 'axios';
-import Config from '../config.js';
-
 
 export default {
   name: 'QuizPage',
@@ -122,7 +129,8 @@ export default {
             const quizId = localStorage.getItem('quizId');
             console.log("Quiz Id from localStorage ********** : ",quizId,"  **********");
             let doc = {quizId};
-            const response = await axios.post(`${Config.base_url}/quiz/getQuiz`, doc);
+            const response = await axios.post('http://localhost:8000/api/quiz/getQuiz', doc);
+            // console.log("Quiz ID : ", quizId);
             console.log("****current  Quiz in current quiz page  *** : ", response.data.quiz);
 
             let quiz = await response.data.quiz;
@@ -136,13 +144,15 @@ export default {
             }
             
             // INCREMENT IN ATTEMPTED BY OF CURRENT QUIZ
-            const result = await axios.post(`${Config.base_url}/quiz/incAttemptedBy`,bdyObj);  
+            const result = await axios.post('http://localhost:8000/api/quiz/incAttemptedBy',bdyObj);  
             console.log(result);
 
 
             if(quiz)
             {
+                // console.log(quiz.questions);
                 this.questions = quiz.questions;
+                // this.count = this.questions.length;
             }else{
                 console.log('Quiz Does not Exists');
             }
@@ -192,7 +202,7 @@ export default {
 
             try{
 
-                const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
+                const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
                 console.log(userInfo);
                 console.log('Correct Answers are : ', this.correctAnswer);
                 let newScore = this.correctAnswer;
@@ -207,7 +217,7 @@ export default {
                 }
 
                 console.log('userIdAndScore : ',userIdAndScore);
-                const response = await axios.post(`${Config.base_url}/user/update` ,userIdAndScore );
+                const response = await axios.post('http://localhost:8000/api/user/update' ,userIdAndScore );
                 console.log(response);
                 this.$router.push({path:'/home',replace:true});
                 localStorage.removeItem('quizId');

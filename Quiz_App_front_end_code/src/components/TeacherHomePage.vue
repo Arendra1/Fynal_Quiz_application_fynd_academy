@@ -17,6 +17,10 @@
                 li_items hover:text-yellow-500 hover:font-bold hover:underline hover:underline-offset-8 cursor-pointe">
               About
             </div>
+            <!-- <div class="
+                li_items hover:text-yellow-500 hover:font-bold hover:underline hover:underline-offset-8 cursor-pointe">
+              Prepare
+            </div> -->
             <div @click="leaderBoard()"
               class="
                 li_items  hover:text-yellow-500 hover:font-bold hover:underline hover:underline-offset-8 cursor-pointe">
@@ -54,7 +58,7 @@
                     <div class="flex flex-col space-y-2"><label class="font-bold font-mono text-md" for="">Domain
                       </label>
                       <select v-model="domain"
-                        class="h-12 w-56 px-2 rounded-sm  text-black bg-white  border-2 border-[#f3f7f7] hover:focus cursor-pointer">
+                      class="h-12 w-56 px-2 rounded-sm  text-black bg-white  border-2 border-[#f3f7f7] hover:focus cursor-pointer">
                         <option value="Select Access Level" disabled selected>Select domain</option>
                         <option value="Aptitude">Aptitude</option>
                         <option value="DSA">DSA</option>
@@ -343,14 +347,43 @@
     </div>
     <!-- Navigation end -->
 
+    <!-- Middle part start -->
+
+    <!-- <div class="middle bg-[#131417] h-screen flex flex-col  justify-center items-center">
+
+      <div
+        class="recentQuiz  w-[80%] h-4/5 flex flex-col justify-center items-center border-2 border-green-400 -mt-30 text-white">
+        <div class="heading  font-bold text-2xl my-4 font-mono">
+          <h1>RECENTLY QUIZZES ADDED BY YOU</h1>
+        </div>
+        <div
+          class="topics border-2 border-white hover:border-green-500 w-[50%] p-10 text-green-700 font-sans font-bold">
+          <h2 class="hover:text-white hover:underline cursor-pointer">Array and Array Operations</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Stack Operations – 1</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Stack Operations – 2</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Singly Linked Lists Operations</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Doubly Linked List</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Circular Linked Lists</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Queue using Linked List</h2>
+          <h2 class="hover:text-white hover:underline cursor-pointer">Double Ended Queue (Dequeue)</h2>
+        </div>
+        <div
+          class="btn h-10 w-40 mt-4 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+          <router-link to="/addQuiz" exact>Add a new Quiz</router-link>
+        </div>
+      </div>
+
+    </div> -->
+
+    <!-- Middle part end -->
+
 
     <!-- Table started  -->
 
     <div class="table h-screen  w-full bg-[#131417] p-16">
 
       <div class="heading text-white flex justify-center items-center font-bold text-2xl my-4 font-mono -mt-10">
-        <h1 class="flex justify-center mb-4 text-green-500 items-center">RECENT QUIZZES ADDED BY <span
-            class="text-yellow-500 ml-4"> {{this.tutorName}}</span></h1>
+        <h1 class="flex justify-center mb-4 text-green-500 items-center">RECENT QUIZZES ADDED BY <span class="text-yellow-500 ml-4"> {{this.tutorName}}</span></h1>
         <p v-if="flag" class="text-sm text-[#131417]">{{getQuizzes()}}</p>
       </div>
       <div class="overflow-x-auto relative shadow-md sm:rounded-lg border-2 border-white">
@@ -358,10 +391,10 @@
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" class="py-3 px-6">
-                ID
+                 ID
               </th>
               <th scope="col" class="py-3 px-6">
-                name
+                 name
               </th>
               <th scope="col" class="py-3 px-6">
                 Category
@@ -408,6 +441,192 @@
               </td>
             </tr>
 
+
+
+            <!-- <tr class="bg-[#131417] border-b   dark:border-gray-700">
+              <td class="py-4 px-6">
+                01
+              </td>
+              <td class="py-4 px-6">
+                Array and Array Operations
+              </td>
+              <td class="py-4 px-6">
+                DSA
+              </td>
+              <td class="py-4 px-6">
+                10
+              </td>
+              <td class="py-4 px-6">
+                Medium
+              </td>
+              <td class="py-4 px-6">
+                20
+              </td>
+              <td class="py-4 px-6">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Results</a>
+              </td>
+            </tr>
+            <tr class="bg-[#131417] first-line: border-b  dark:border-gray-700">
+              <td class="py-4 px-6">
+                02
+              </td>
+              <td class="py-4 px-6">
+                Stack Operations – 1
+              </td>
+              <td class="py-4 px-6">
+                DSA
+              </td>
+              <td class="py-4 px-6">
+                10
+              </td>
+              <td class="py-4 px-6">
+                Easy
+              </td>
+              <td class="py-4 px-6">
+                10
+              </td>
+              <td class="py-4 px-6">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Results</a>
+              </td>
+            </tr>
+            <tr class="bg-[#131417] border-b   dark:border-gray-700">
+              <td class="py-4 px-6">
+                03
+              </td>
+              <td class="py-4 px-6">
+                Stack Operations – 2
+              </td>
+              <td class="py-4 px-6">
+                DSA
+              </td>
+              <td class="py-4 px-6">
+                100
+              </td>
+              <td class="py-4 px-6">
+                Medium
+              </td>
+              <td class="py-4 px-6">
+                20
+              </td>
+              <td class="py-4 px-6">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Results</a>
+              </td>
+            </tr>
+            <tr class="bg-[#131417] border-b  dark:border-gray-700">
+              <td class="py-4 px-6">
+                04
+              </td>
+              <td class="py-4 px-6">
+                Singly Linked Lists Operations
+              </td>
+              <td class="py-4 px-6">
+                DSA
+              </td>
+              <td class="py-4 px-6">
+                10
+              </td>
+              <td class="py-4 px-6">
+                Medium
+              </td>
+              <td class="py-4 px-6">
+                20
+              </td>
+              <td class="py-4 px-6">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Results</a>
+              </td>
+            </tr>
+            <tr class="bg-[#131417] border-b  dark:border-gray-700">
+              <td class="py-4 px-6">
+                05
+              </td>
+              <td class="py-4 px-6">
+                Doubly Linked List
+              </td>
+              <td class="py-4 px-6">
+                DSA
+              </td>
+              <td class="py-4 px-6">
+                10
+              </td>
+              <td class="py-4 px-6">
+                Easy
+              </td>
+              <td class="py-4 px-6">
+                10
+              </td>
+              <td class="py-4 px-6">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Results</a>
+              </td>
+            </tr>
+            <tr class="bg-[#131417] border-b   dark:border-gray-700">
+              <td class="py-4 px-6">
+                06
+              </td>
+              <td class="py-4 px-6">
+                Circular Linked List
+              </td>
+              <td class="py-4 px-6">
+                DSA
+              </td>
+              <td class="py-4 px-6">
+                100
+              </td>
+              <td class="py-4 px-6">
+                Medium
+              </td>
+              <td class="py-4 px-6">
+                20
+              </td>
+              <td class="py-4 px-6">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Results</a>
+              </td>
+            </tr>
+            <tr class="bg-[#131417] border-b   dark:border-gray-700">
+              <td class="py-4 px-6">
+                07
+              </td>
+              <td class="py-4 px-6">
+                Queue using Linked List
+              </td>
+              <td class="py-4 px-6">
+                DSA
+              </td>
+              <td class="py-4 px-6">
+                100
+              </td>
+              <td class="py-4 px-6">
+                Medium
+              </td>
+              <td class="py-4 px-6">
+                20
+              </td>
+              <td class="py-4 px-6">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Results</a>
+              </td>
+            </tr>
+            <tr class="bg-[#131417] border-b   dark:border-gray-700">
+              <td class="py-4 px-6">
+                08
+              </td>
+              <td class="py-4 px-6">
+                Double Ended Queue (Dequeue)
+              </td>
+              <td class="py-4 px-6">
+                DSA
+              </td>
+              <td class="py-4 px-6">
+                100
+              </td>
+              <td class="py-4 px-6">
+                Medium
+              </td>
+              <td class="py-4 px-6">
+                20
+              </td>
+              <td class="py-4 px-6">
+                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Results</a>
+              </td>
+            </tr> -->
           </tbody>
         </table>
 
@@ -419,6 +638,10 @@
           class="btn h-10 w-40 mt-8 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
           <router-link to="/addQuiz" exact>Add a new Quiz</router-link>
         </div>
+        <!-- <div
+            class="btn h-10 w-40 mt-4 font-bold  border-2 border-white flex justify-center items-center text-white rounded-sm hover:border-green-500 hover:text-green-500 ">
+            <router-link to="/addQuiz" exact>Update Quiz</router-link>
+          </div> -->
 
       </div>
 
@@ -435,7 +658,6 @@
 <script>
 import Vue from 'vue';
 import axios from 'axios';
-import Config from '../config.js';
 import VueToast from 'vue-toast-notification';
 Vue.use(VueToast);
 import 'vue-toast-notification/dist/theme-sugar.css';
@@ -447,7 +669,7 @@ export default {
     return {
       success: false,
       flag: true,
-      tutorName: '',
+      tutorName:'',
       name: '',
       email: '',
       displayName: '',
@@ -469,7 +691,7 @@ export default {
     async profile() {
 
       try {
-        const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
+        const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
         this.name = userInfo.data.user.name;
         this.email = userInfo.data.user.email;
         this.displayName = userInfo.data.user.displayName;
@@ -491,17 +713,17 @@ export default {
 
 
       // Display Tutor Name
-
+        
 
 
 
       try {
 
-        const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
+        const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
         this.tutorName = userInfo.data.user.name;
         const tutorDomain = userInfo.data.user.domain;
 
-        const result = await axios.get(`${Config.base_url}/quiz/quizzes`);
+        const result = await axios.get('http://localhost:8000/api/quiz/quizzes');
         const quizzes = result.data.quizzes;
         quizzes.sort((a, b) => b.quizId - a.quizId);
         console.log('Quizzes result is', quizzes);
@@ -510,7 +732,8 @@ export default {
 
 
         quizzes.forEach(quiz => {
-          if (quiz.category == tutorDomain) {
+          if(quiz.category == tutorDomain)
+          {
             this.allQuizzes.push(quiz);
           }
         });
@@ -526,7 +749,6 @@ export default {
 
     },
 
-
     leaderBoard() {
       this.$router.push({ path: '/leadboard', replace: true })
     },
@@ -536,7 +758,7 @@ export default {
     // UPDATE PROFILE Function
     async updateProfile() {
 
-      const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
+      const userInfo = await axios.get('http://localhost:8000/api/user/loggeduser');
       console.log(userInfo);
       const id = userInfo.data.user._id;
       const displayName = this.displayName;
@@ -552,7 +774,7 @@ export default {
         bio
       }
 
-      const response = await axios.post(`${Config.base_url}/user/updateProfile`, doc);
+      const response = await axios.post('http://localhost:8000/api/user/updateProfile', doc);
       Vue.$toast.open(response.data.message);
 
     },
@@ -565,7 +787,7 @@ export default {
       console.log("updateQuiz Function has called");
       console.log("**** Quiz ID in teacher home page ***", quizId);
       let doc = { quizId };
-      const response = await axios.post(`${Config.base_url}/quiz/updateQuiz`, doc);
+      const response = await axios.post('http://localhost:8000/api/quiz/updateQuiz', doc);
 
       if (response) {
         localStorage.setItem('quizId', quizId);
