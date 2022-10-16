@@ -499,7 +499,6 @@ export default {
 
         const userInfo = await axios.get(`${Config.base_url}/user/loggeduser`);
         this.tutorName = userInfo.data.user.name;
-        this.tutorName = this.camelize(this.tutorName);
         const tutorDomain = userInfo.data.user.domain;
 
         const result = await axios.get(`${Config.base_url}/quiz/quizzes`);
