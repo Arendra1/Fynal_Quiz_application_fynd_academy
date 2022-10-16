@@ -1,6 +1,7 @@
 import idModel from "../models/incremnet.js";
 import quizModel from "../models/quiz.js";
 import axios from 'axios';
+import Config from '../quiz-app/src/config.js'
 
 class idController {
   static addId = async (req, res) => {
@@ -32,7 +33,7 @@ class idController {
 
 
           try{
-            const response = await axios.post('http://localhost:8000/api/quiz/addQuiz', doc);
+            const response = await axios.post(`${Config.base_url}/quiz/addQuiz`, doc);
             console.log("Below Data Is from counter Table");
             console.log(response.data);
             if(response.data.status == "success")
